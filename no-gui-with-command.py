@@ -17,7 +17,22 @@ class FileSearchApp:
                 found_paths.append(os.path.join(root, filename))
         return found_paths
 
+def print_welcome():
+    welcome_text = """
+
+██████╗░░█████╗░██████╗░░█████╗░██╗░░░██╗██╗██████╗░██╗░░░██╗░███████╗
+██╔══██╗██╔══██╗██╔══██╗██╔══██╗██║░░░██║██║██╔══██╗██║░░░██║██╔██╔══╝
+██████╔╝███████║██████╔╝███████║╚██╗░██╔╝██║██████╔╝██║░░░██║╚██████╗░
+██╔═══╝░██╔══██║██╔══██╗██╔══██║░╚████╔╝░╚═╝██╔══██╗██║░░░██║░╚═██╔██╗
+██║░░░░░██║░░██║██║░░██║██║░░██║░░╚██╔╝░░██╗██║░░██║╚██████╔╝███████╔╝
+╚═╝░░░░░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝░░░╚═╝░░░╚═╝╚═╝░░╚═╝░╚═════╝░╚══════╝░
+                            !File Finder!
+   """
+    print(welcome_text)
+
 def main():
+    print_welcome()
+
     app = FileSearchApp()
     target_filename = input("Enter the filename: ")
     if not target_filename:
@@ -48,7 +63,7 @@ def main():
                         else:
                             print("No command provided.")
                     elif run_command == "no":
-                        print("No command will be executed.\nHave a good day!")
+                        print("No command will be executed.")
                     else:
                         print("Invalid choice.")
                 else:
